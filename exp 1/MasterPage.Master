@@ -1,0 +1,67 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="Exp_1.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns =" http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+ <title>DeveloperSoft Inc.</title>
+ <asp:ContentPlaceHolder ID="head" runat="server">
+ </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+        }
+        .nuevoEstilo1 {
+            vertical-align: top;
+            background-color: #c0c0c0;
+            width: 200px;
+            height: 300px;
+        }
+        .nuevoEstilo2 {
+            vertical-align: top;
+            background-color: #999999;
+            width: 45px;
+            height: 45px;
+            border-bottom-style: solid;
+            border-bottom-width: thick;
+            border-bottom-color: #336600;
+        }
+        .auto-style2 {
+            width: 240px;
+            height: 82px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+         <table class="auto-style1">
+             <tr>
+                 <td class="nuevoEstilo2" colspan="2">
+                     <img alt="logo" class="auto-style2" src="image/empresa.png" /></td>
+             </tr>
+             <tr>
+                 <td colspan="2">Cabecera</td>
+             </tr>
+             <tr>
+                 <td class="nuevoEstilo1">Menu<br />
+                     <asp:TreeView ID="TreeView1" runat="server" DataSourceID="SiteMapDataSource1">
+                     </asp:TreeView>
+                     <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+                     <asp:XmlDataSource ID="XmlDataSource1" runat="server"></asp:XmlDataSource>
+                 </td>
+                 <td>
+                     <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                         <p>
+                             Pagina de inicio de la aplicacion.</p>
+                     </asp:ContentPlaceHolder>
+                 </td>
+             </tr>
+             <tr>
+                 <td colspan="2"><span lang="EN-US" style="font-size: 12.0pt; mso-bidi-font-size: 10.0pt; font-family: &quot;Times New Roman&quot;,serif; mso-fareast-font-family: Cambria; mso-fareast-theme-font: minor-latin; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">Copyright © 2020 The Soft Inc. </span></td>
+             </tr>
+         </table>
+     </form>
+</body>
+</html>
+
